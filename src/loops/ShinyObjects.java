@@ -2,7 +2,7 @@
 //    Level 0
 
 package loops;
-
+import javax.swing.JOptionPane;
 import java.applet.AudioClip;
 
 import javax.sound.sampled.AudioSystem;
@@ -13,10 +13,20 @@ import javax.swing.JApplet;
 public class ShinyObjects {
 	public static void main(String[] args) {
 		// 2. Ask the user how many shiny objects they want
-
+		String manyObjects = JOptionPane.showInputDialog("How many Shiny Objects do you want?");
+		if (!manyObjects.isEmpty()) {
+			
+		}
+		try
+		{
+			int i = Integer.parseInt(manyObjects);
+			for (int z = 1; z <= i ; z++) {
+				playMisterZee();
+			}
+		} catch (NumberFormatException e) {
+			System.out.println("Not a Number");
+		}
 		// 3. Play the sound that many times
-
-		// 1. Call the method below
 
 	}
 
